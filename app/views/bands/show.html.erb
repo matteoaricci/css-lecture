@@ -1,0 +1,25 @@
+<h1 id='band-header'><%= @band.name %></h1>
+
+<h2 id='member-header'> Band Members </h2>
+
+<ul id='members-list'>
+    <% @band.members.each do |member| %>
+    <li class='member'><%= member.name%></li>
+    <% end %>
+</ul>
+
+<h2 id='album-header'> Albums </h2>
+
+<ul id='albums-list'>
+    <% @band.albums.each do |album| %>
+
+    <li class='album'><%= album.name%>
+
+        <ul id='songs-list'>
+        <% album.songs.each do |song| %>
+        
+            <li> <%= song.name%></li>
+        <% end %>
+        </ul>
+    <% end %>
+</ul>
