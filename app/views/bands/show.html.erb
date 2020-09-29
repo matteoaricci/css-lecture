@@ -18,12 +18,14 @@
 
 <div class='album section'>
    <h2 class='album header'> Albums </h2>
-   <div id='albums-list'>
+   <div class='album-container'>
       <% @band.albums.each do |album| %>
       <div class='whole-album'>
+        <div class='alb'>
          <div class='album-title'><%= album.name%></div>
          <%= image_tag(album.image_file, class: 'album-img') %>
-         <div id='songs-list'>
+        </div>
+         <div class='songs-list'>
             <% album.songs.each do |song| %>
             <div class='song'> <%= song.name%></div>
             <% end %>

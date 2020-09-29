@@ -21,13 +21,41 @@ html, body {
     text-transform: uppercase;
 }
 
+.album.header, .member.header {
+    text-align: center;
+    letter-spacing: 3px;
+    font-size: 2rem;
+}
+
 .album-img {
-    width: 300px;
+    width: 350px;
+    height: 200px;
+    object-fit: cover;
 }
 
 .member {
     position: relative;
     text-align: center;
+}
+
+.alb {
+    text-align: center;
+    position: relative;
+    width: 350px;
+}
+.album-title {
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-transform: uppercase;
+  font-size: 2rem;
+  text-shadow: -2px 4px 2px black;
+  font-weight: 700;
+  letter-spacing: 0.65rem;
+  text-align: center;
 }
 
 .member-name {
@@ -62,21 +90,38 @@ html, body {
     width: 30%;
     float: left;
     overflow: scroll;
+    margin-left: 5%;
 }
 
 .album.section {
     width: 60%;
     float: right;
+    justify-content: space-evenly;
+    margin-right: 2%;
 }
 
 .whole-album {
     width: 40%;
-    margin-right: 0;
+    margin-right: 2%;
     float: left;
 }
 
-.album-title {
-    font-size: 2rem;
+.songs-list {
+    height: 340px;
+    overflow: scroll;
+}
+
+.song {
     text-transform: uppercase;
-    margin-bottom: 2%;
+    font-size: 1.5rem;
+    margin: 3%;
+
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.album-container {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
 }
