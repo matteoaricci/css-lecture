@@ -1,15 +1,112 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+body, html {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    height: 100%;
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+.band-header {
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 1.0rem;
+}
+
+.member-header, .album-header {
+    text-transform: uppercase;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.all-members, .all-albums {
+    height: 70%;
+    overflow: scroll;
+}
+
+.member-section {
+    float: left;
+    margin-left: 5%;
+    width: 40%;
+    height: 100%;
+}
+
+.single-member {
+    position: relative;
+    text-align: center;
+}
+
+.member-name {
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    font-size: 2rem;
+    color: white;
+    font-weight: 700;
+    letter-spacing: 0.65rem;
+}
+
+.member-image {
+    width: 90%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.album-section {
+    float: right;
+    width: 50%;
+    margin-right: 2%;
+}
+
+.all-albums {
+    justify-content: space-evenly;
+    position: relative;
+    display: flex;
+}
+
+.single-album  {
+    float: left;
+    width: 40%;
+}
+
+.album-info {
+    position: relative;
+    text-align: center;
+
+}
+
+.album-title {
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+}
+
+.album-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.single-album div.song-name {
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    font-style: italic;
+    margin: 10%;
+    transition: 0.2s;
+}
+
+.single-album div.song-name:hover {
+    letter-spacing: 2px;
+}
+
+.songs-list {
+    height: 350px;
+    overflow: scroll;
+}

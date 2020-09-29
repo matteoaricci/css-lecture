@@ -1,20 +1,32 @@
 <h1 class='band-header'><%= @band.name %></h1>
 
-<h2 class='member-header'> Band Members </h2>
-<div class='all-members'>
-    <% @band.members.each do |member| %>
-        <div class='member'><%= member.name%></div>
-    <% end %>
+<div class='member-section'>
+    <h2 class='member-header'> Band Members </h2>
+    <div class='all-members'>
+        <% @band.members.each do |member| %>
+        <div class='single-member'>
+            <div class='member-name'><%= member.name%></div>
+            <%= image_tag(member.image_file, class: 'member-image') %>
+        </div>
+        <% end %>
+    </div>
 </div>
 
-<h2 class='album-header'> Albums </h2>
-<div class='all-albums'>
-    <% @band.albums.each do |album| %>
-    <div class='single-album'><%= album.name%>
-        <div class='songs-list'>
-        <% album.songs.each do |song| %>
+<div class='album-section'>
+   <h2 class='album-header'> Albums </h2>
+   <div class='all-albums'>
+      <% @band.albums.each do |album| %>
+      <div class='single-album'>
+         <div class='album-info'>
+            <div class='album-title'><%= album.name%></div>
+            <%= image_tag(album.image_file, class: 'album-image') %>
+         </div>
+         <div class='songs-list'>
+            <% album.songs.each do |song| %>
             <div class='song-name'> <%= song.name%></div>
-        <% end %>
-        </div>
-    <% end %>
+            <% end %>
+         </div>
+      </div>
+      <% end %>
+   </div>
 </div>
