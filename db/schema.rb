@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 2020_09_28_143158) do
     t.string "name"
     t.integer "band_id"
     t.integer "release_year"
+    t.string "image_file"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -29,6 +30,7 @@ ActiveRecord::Schema.define(version: 2020_09_28_143158) do
   create_table "members", force: :cascade do |t|
     t.string "name"
     t.integer "band_id"
+    t.string "image_file"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
